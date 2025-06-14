@@ -3,6 +3,7 @@ import PrashantImg from "../assets/image/Prashant.jpg";
 import salman from "../assets/image/salman.jpeg";
 import virat from "../assets/image/RCB_Virat.jpg";
 import UserCard from "./UserCard";
+import { useNavigate } from "react-router-dom";
 
 const users = [
   { name: "Prashant", image: PrashantImg, address: "Lucknow" },
@@ -11,6 +12,11 @@ const users = [
 ];
 
 export default function Home() {
+  const navigate = useNavigate(); // for one page to another page redirect
+  const handleClick = () => {
+    navigate("/about");
+  };
+
   return (
     <>
       <div>
@@ -25,6 +31,9 @@ export default function Home() {
             address={user.address}
           />
         ))}
+      </div>
+      <div>
+        <button onClick={handleClick}> Move to About Page</button>
       </div>
     </>
   );
