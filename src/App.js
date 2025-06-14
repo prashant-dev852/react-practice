@@ -5,6 +5,7 @@ import About from "./components/About";
 import DashBoard from "./components/DashBoard";
 import NavBar from "./components/NavBar";
 import ParamComp from "./components/ParamComp";
+import NotFound from "./components/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -43,7 +44,8 @@ const router = createBrowserRouter([
         <ParamComp />
       </>
     ),
-  },
+  }, // undefine path catch here
+  { path: "*", element: <NotFound /> },
 ]);
 
 function App() {
