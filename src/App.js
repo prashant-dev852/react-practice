@@ -6,6 +6,8 @@ import DashBoard from "./components/DashBoard";
 import NavBar from "./components/NavBar";
 import ParamComp from "./components/ParamComp";
 import NotFound from "./components/NotFound";
+import Course from "./components/Course";
+import Results from "./components/Results";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +36,10 @@ const router = createBrowserRouter([
         <DashBoard />
       </div>
     ),
+    children: [
+      { path: "course", element: <Course /> },
+      { path: "reports", element: <Results /> },
+    ],
   },
   //example of useParams
   {
