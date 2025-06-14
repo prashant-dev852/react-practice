@@ -4,7 +4,7 @@ import "./UserCard.css";
 export default function UserCard(props) {
   return (
     <div className="user-container">
-      <h>Hi My name is Prashant</h>
+      <h>Hi My name is {props.name}</h>
       <img
         id="user-img"
         src={props.image}
