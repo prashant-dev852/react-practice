@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 
 export default function NavBar() {
+  const id = 42;
   return (
     <div>
       <ul>
@@ -32,7 +33,7 @@ export default function NavBar() {
         </li>
         <li>
           <NavLink
-            to="/paramComp"
+            to={`/paramComp/${id}`}
             className={({ isActive }) => (isActive ? "active-link" : "")}
           >
             ParamComponent
