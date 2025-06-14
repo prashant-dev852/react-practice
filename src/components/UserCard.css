@@ -1,16 +1,13 @@
 .user-container {
-  background-color: bisque;
-  padding: 10px;
-  color: black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1.5rem;
-  align-items: center;
-  margin: 1rem;
+  background-color: black;
+  padding: 20px;
+  width: 300px;
+  border-radius: 12px;
+  text-align: center;
+  margin: 20px auto;
+  color: white;
 }
 
-#user-img {
-  height: 50%;
-  border-radius: 50%;
+.user-img {
+  margin-top: 10px;
 }

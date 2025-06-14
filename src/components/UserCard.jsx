@@ -4,9 +4,9 @@ import "./UserCard.css";
 export default function UserCard(props) {
   return (
     <div className="user-container">
-      <h>Hi My name is {props.name}</h>
+      <h2>Hi, my name is {props.name}</h2>
       <img
-        id="user-img"
+        className="user-img"
         src={props.image}
         alt={props.address}
         style={{
@@ -17,6 +17,7 @@ export default function UserCard(props) {
           border: "3px solid white",
         }}
       />
+      <p>{props.address}</p>
     </div>
   );
 }
