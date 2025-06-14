@@ -30,6 +30,14 @@ export default function NavBar() {
             DashBoard
           </NavLink>
         </li>
+        <li>
+          <NavLink
+            to="/paramComp"
+            className={({ isActive }) => (isActive ? "active-link" : "")}
+          >
+            ParamComponent
+          </NavLink>
+        </li>
       </ul>
     </div>
   );
