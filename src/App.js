@@ -8,6 +8,7 @@ import ParamComp from "./components/ParamComp";
 import NotFound from "./components/NotFound";
 import Course from "./components/Course";
 import Results from "./components/Results";
+import { ErrorBoundary } from "react-error-boundary";
 
 const router = createBrowserRouter([
   {
@@ -22,19 +23,23 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: (
-      <div>
-        <NavBar />
-        <About />
-      </div>
+      <ErrorBoundary fallback={<p>Some went wrong !!</p>}>
+        <div>
+          <NavBar />
+          <About />
+        </div>
+      </ErrorBoundary>
     ),
   },
   {
     path: "/dashboard",
     element: (
-      <div>
-        <NavBar />
-        <DashBoard />
-      </div>
+      <ErrorBoundary fallbackRender={<p>Some went wrong on Dashboard !!</p>}>
+        <div>
+          <NavBar />
+          <DashBoard />
+        </div>
+      </ErrorBoundary>
     ),
     children: [
       { path: "course", element: <Course /> },
