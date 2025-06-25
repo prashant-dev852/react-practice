@@ -5,6 +5,7 @@ import virat from "../assets/image/RCB_Virat.jpg";
 import UserCard from "./UserCard";
 import { useNavigate } from "react-router-dom";
 import UncontrolledForm from "./UncontrolledForm";
+import Controlled from "./Controlled";
 
 const users = [
   { name: "Prashant", image: PrashantImg, address: "Lucknow" },
@@ -26,6 +27,7 @@ export default function Home() {
       <div className="container">
         {users.map((user, index) => (
           <UserCard
+            key={user.name}
             id={index}
             name={user.name}
             image={user.image}
@@ -37,6 +39,7 @@ export default function Home() {
         <button onClick={handleClick}> Move to About Page</button>
       </div>
       <UncontrolledForm />
+      <Controlled />
     </>
   );
 }
