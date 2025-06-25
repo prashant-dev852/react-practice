@@ -4,6 +4,7 @@ import salman from "../assets/image/salman.jpeg";
 import virat from "../assets/image/RCB_Virat.jpg";
 import UserCard from "./UserCard";
 import { useNavigate } from "react-router-dom";
+import UncontrolledForm from "./UncontrolledForm";
 
 const users = [
   { name: "Prashant", image: PrashantImg, address: "Lucknow" },
@@ -35,6 +36,7 @@ export default function Home() {
       <div>
         <button onClick={handleClick}> Move to About Page</button>
       </div>
+      <UncontrolledForm />
     </>
   );
 }
