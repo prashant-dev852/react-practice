@@ -10,6 +10,11 @@ import Course from "./components/Course";
 import Results from "./components/Results";
 import { ErrorBoundary } from "react-error-boundary";
 import Test from "./components/Test";
+import { createContext } from "react";
+
+// create context to pass data to Test2 component directly
+
+const Testcontext = createContext();
 
 const router = createBrowserRouter([
   {
@@ -61,14 +66,21 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  const user = { name: "Prashant", age: 25, city: "Delhi" }; // example user object
   return (
     <>
       <div>
         <RouterProvider router={router} />
-        <Test name="data passed from App" />
+        <Testcontext.Provider value={user}>
+          <Test name="props drilling issue data pass one to another component" />
+        </Testcontext.Provider>
       </div>
     </>
   );
 }
 
 export default App;
+export { Testcontext }; // export the context to use in other components
+// This context can be used to pass data to Test2 component directly without props drilling.
+// In Test2 component, you can use useContext(Testcontext) to access the user data
+// Example usage in Test2 component:
