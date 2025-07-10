@@ -9,6 +9,7 @@ import NotFound from "./components/NotFound";
 import Course from "./components/Course";
 import Results from "./components/Results";
 import { ErrorBoundary } from "react-error-boundary";
+import Test from "./components/Test";
 
 const router = createBrowserRouter([
   {
@@ -64,6 +65,7 @@ function App() {
     <>
       <div>
         <RouterProvider router={router} />
+        <Test name="data passed from App" />
       </div>
     </>
   );
