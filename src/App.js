@@ -11,6 +11,8 @@ import Results from "./components/Results";
 import { ErrorBoundary } from "react-error-boundary";
 import Test from "./components/Test";
 import { createContext } from "react";
+import Product from "./components/Product";
+import Product2 from "./components/Product2";
 
 // create context to pass data to Test2 component directly
 
@@ -75,6 +77,8 @@ function App() {
           <Test name="props drilling issue data pass one to another component" />
         </Testcontext.Provider>
       </div>
+      <Product />
+      <Product2 />
     </>
   );
 }
